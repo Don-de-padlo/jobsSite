@@ -1,0 +1,11 @@
+{
+  "name": "jobssite",
+  "version": "1.0.0",
+  "description": "pet site for jobs vacantion",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hudz Muhailo",
+  "license": "ISC"
+}
