@@ -1,0 +1,36 @@
+.main-content-wrapper{
+    background-color: rgba(51, 102, 204, .5);
+    min-height: 100vh;
+    min-width: 95vw;
+}
+.vacantion-form-wrapper{
+    background-color: antiquewhite;
+    min-width: 200px;
+    min-height: 100px;
+    margin: 50px;
+}
+.vacantion-form-content{
+    display: flex;
+    justify-content: space-between;
+}
+.vacantion-salary{
+    margin-bottom: 10px;
+}
+.description-wrapper{
+    margin-bottom: 10px;
+}
+.vacantion-form-content{
+    padding: 20px;
+}
+.vacantion-company{
+    margin-right: 20px;
+}
+.vacantion-title-brand-image{
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    padding: 10px;
+}
+.vacantion-button{
+    width: 100%;
+}
