@@ -1,3 +1,15 @@
 .header-wrapper{
+    min-height: 10vh;
     background-color: red;
+    padding: 10px;
+    
+}
+.top-header-content{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-header-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }

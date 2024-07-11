@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="header-wrapper">
+        <a href="./index.html">
+            <img src="https://images.cf-rabota.com.ua/2019/08/logo-white.svg"/>
+        </a>
+        
+    </div>
+    <div class="container mt-5">
+        <h2>Add Job Vacancy</h2>
+        <form id="vacancyForm">
+            <div class="form-group">
+                <label for="vacancyName">Vacancy Name</label>
+                <input type="text" class="form-control" id="vacancyName" placeholder="Enter vacancy name" required>
+            </div>
+            <div class="form-group">
+                <label for="vacancySalary">Vacancy Salary</label>
+                <input type="text" class="form-control" id="vacancySalary" placeholder="Enter vacancy salary" required>
+            </div>
+            <div class="form-group">
+                <label for="vacancyCompany">Vacancy Company</label>
+                <input type="text" class="form-control" id="vacancyCompany" placeholder="Enter vacancy company" required>
+            </div>
+            <div class="form-group">
+                <label for="vacancyCity">Vacancy City</label>
+                <input type="text" class="form-control" id="vacancyCity" placeholder="Enter vacancy city" required>
+            </div>
+            <div class="form-group">
+                <label for="vacancyImage">Vacancy Image URL</label>
+                <input type="text" class="form-control" id="vacancyImage" placeholder="Enter vacancy image URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> <i class="fas fa-search">Create Vacantion</i></button>
+        </form>
+    </div>
+    <script src="js/create-vacantion.js"></script>
+</body>
+</html>

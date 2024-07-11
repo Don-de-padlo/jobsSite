@@ -1,5 +1,6 @@
 console.log("script");
 function init() {
+    
     import('./vacantion.js');
 }
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;

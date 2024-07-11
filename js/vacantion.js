@@ -1,9 +1,11 @@
 console.log("vacantion");
+import("./create-vacantion.js");
+function addVacantionBlock(id) {
 
-function addVacantionBlock(rate) {
+    const storedVacantion = JSON.parse(localStorage.getItem('vacantion'+id));
     // Create main wrapper div
     let vacantionWrapper = document.createElement('div');
-    vacantionWrapper.id = '0';
+    vacantionWrapper.id = id;
     vacantionWrapper.classList.add('vacantion-form-wrapper');
 
     // Create inner content div
@@ -14,11 +16,11 @@ function addVacantionBlock(rate) {
     let titleText = document.createElement('div');
     titleText.classList.add('vacantion-title-text');
     titleText.innerHTML = `
-        <h2 class="vacantion-naming"> Junior affiliate manager </h2>
-        <span class="vacantion-salary"> 40 000 — 50 000 ₴   </span>
+        <h2 class="vacantion-naming"> ${storedVacantion.vacancyName}</h2>
+        <span class="vacantion-salary"> ${storedVacantion.vacancySalary} ₴ </span>
         <div class="description-wrapper">
-            <span class="vacantion-company"> Orange Hunters </span>
-            <span class="vacantion-city"> Київ </span>
+            <span class="vacantion-company"> ${storedVacantion.vacancyCompany} </span>
+            <span class="vacantion-city">${storedVacantion.vacancyCity}</span>
         </div>
     `;
 
@@ -30,7 +32,7 @@ function addVacantionBlock(rate) {
     // Append title and image to content div
     vacantionContent.appendChild(titleText);
     vacantionContent.appendChild(image);
-    let id = 0;
+
     let button = document.createElement('button');
     button.classList.add('vacantion-button','btn', 'btn-primary');
     button.textContent = 'Click Me';
@@ -50,5 +52,20 @@ function addVacantionBlock(rate) {
     // Append main wrapper to main content wrapper
     document.querySelector('.main-content-wrapper').appendChild(vacantionWrapper);
 }
-
-document.querySelector('.create-vacantion').addEventListener('click', addVacantionBlock);
+function redirectToCreateVacationPage() {
+    // Assuming you want to redirect the entire page to create-vacation.html
+    window.location.href = 'create-vacantion.html';
+  }
+function findAllVacantion(){
+    document.querySelector('.main-content-wrapper').innerHTML = "";
+    const id = JSON.parse(localStorage.getItem('id'));
+    for(let i =0;i <= parseInt(id); i++){
+        addVacantionBlock(i);
+    }
+}
+function clearLocalStorage(){
+    localStorage.clear();
+}
+document.querySelector('.create-vacantion').addEventListener('click', redirectToCreateVacationPage);
+document.querySelector('.find-button').addEventListener('click', findAllVacantion);
+document.querySelector('.clear-button').addEventListener('click', clearLocalStorage);
