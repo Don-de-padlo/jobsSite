@@ -27,6 +27,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted
+    runs-on: 
+      - self-hosted
+      - label-1
     steps:
       - run: echo "sdfsdfdwscsdcsd"
